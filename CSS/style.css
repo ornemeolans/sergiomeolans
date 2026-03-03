@@ -354,7 +354,10 @@ body {
 
 .grid {
   display: grid;
-  grid-template-areas: "text-1 text-1 text-1" "img-1 text-2 img-3" "img-4 img-2 text-3" "text-4 img-5 none"; }
+  grid-template-areas: "text-1 text-1 text-1"
+ "img-1 text-2 img-3"
+ "img-4 img-2 text-3"
+ "text-4 img-5 none"; }
 
 .text-1 {
   grid-area: text-1;
@@ -428,7 +431,11 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .grid {
     display: grid;
-    grid-template-areas: "text-1 text-1" "img-1 text-2" "img-3 img-4" "text-3 img-2" "text-4 img-5"; }
+    grid-template-areas: "text-1 text-1"
+ "img-1 text-2"
+ "img-3 img-4"
+ "text-3 img-2"
+ "text-4 img-5"; }
   .text-1 {
     grid-area: text-1;
     display: flex;
@@ -493,7 +500,15 @@ body {
 @media screen and (max-width: 767px) {
   .grid {
     display: grid;
-    grid-template-areas: "text-1" "img-1" "text-2" "img-3" "text-3" "img-4" "text-4" "img-2" "img-5"; }
+    grid-template-areas: "text-1"
+ "img-1"
+ "text-2"
+ "img-3"
+ "text-3"
+ "img-4"
+ "text-4"
+ "img-2"
+ "img-5"; }
   .text-1 {
     grid-area: text-1;
     display: flex;
@@ -557,7 +572,12 @@ body {
 
 .grid-1 {
   display: grid;
-  grid-template-areas: "title title title title" "paragraph paragraph paragraph paragraph" "card-1 card-13 card-14 card-15" "card-16 card-2 card-3 card-4" "card-5 card-6 card-7 card-8" "card-9 card-10 card-11 card-12"; }
+  grid-template-areas: "title title title title"
+ "paragraph paragraph paragraph paragraph"
+ "card-1 card-13 card-14 card-15"
+ "card-16 card-2 card-3 card-4"
+ "card-5 card-6 card-7 card-8"
+ "card-9 card-10 card-11 card-12"; }
 
 .title {
   grid-area: title;
@@ -1329,7 +1349,14 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .grid-1 {
     display: grid;
-    grid-template-areas: "title title title" "paragraph paragraph paragraph" "card-1 card-13 card-14" "card-15 card-16 card-2" "card-3 card-4 card-5" "card-6 card-7 card-8" "card-9 card-10 card-11" "card-12 none none"; }
+    grid-template-areas: "title title title"
+ "paragraph paragraph paragraph"
+ "card-1 card-13 card-14"
+ "card-15 card-16 card-2"
+ "card-3 card-4 card-5"
+ "card-6 card-7 card-8"
+ "card-9 card-10 card-11"
+ "card-12 none none"; }
   .title {
     grid-area: title;
     display: flex;
@@ -2071,7 +2098,16 @@ body {
 @media screen and (min-width: 465px) and (max-width: 767px) {
   .grid-1 {
     display: grid;
-    grid-template-areas: "title title" "paragraph paragraph" "card-1 card-13" "card-14 card-15" "card-16 card-2" "card-3 card-4" "card-5 card-6" "card-7 card-8" "card-9 card-10" "card-11 card-12"; }
+    grid-template-areas: "title title"
+ "paragraph paragraph"
+ "card-1 card-13"
+ "card-14 card-15"
+ "card-16 card-2"
+ "card-3 card-4"
+ "card-5 card-6"
+ "card-7 card-8"
+ "card-9 card-10"
+ "card-11 card-12"; }
   .title {
     grid-area: title;
     display: flex;
@@ -2813,7 +2849,16 @@ body {
 @media screen and (max-width: 464px) {
   .grid-1 {
     display: grid;
-    grid-template-areas: "title title" "paragraph paragraph" "card-1 card-13" "card-14 card-15" "card-16 card-2" "card-3 card-4" "card-5 card-6" "card-7 card-8" "card-9 card-10" "card-11 card-12"; }
+    grid-template-areas: "title title"
+ "paragraph paragraph"
+ "card-1 card-13"
+ "card-14 card-15"
+ "card-16 card-2"
+ "card-3 card-4"
+ "card-5 card-6"
+ "card-7 card-8"
+ "card-9 card-10"
+ "card-11 card-12"; }
   .title {
     grid-area: title;
     display: flex;

@@ -11,6 +11,11 @@
     padding: 0;
 }
 
+// Corrección para eliminar el subrayado de los enlaces en el contenido
+a {
+    text-decoration: none;
+}
+
 .navbar-expand-lg .navbar-collapse {
     flex-direction: row-reverse;
 }
