@@ -1,15 +1,13 @@
-$color-background:#ffe6ab;
-$font:'Rubik', sans-serif;
-$font-color:#ffffff;
-$color-header-background:#5e5e5e;
-$color-footer-background:#e8e7e6;
-$h1-size-desktop:40px;
-$h2-size-desktop:30px;
-$h4-size-desktop:20px;
-$p-size-desktop:16px;
-$a-size-desktop:20px;
-$h1-size-mobile:20px;
-$h2-size-mobile:15px;
-$h4-size-mobile:16px; // Corregido de 10px
-$p-size-mobile:12px; // Corregido de 7px
-$a-size-mobile:14px; // Corregido de 10px
+// Paleta Orgánica
+$color-fondo: #f9f7f2;    // Blanco hueso
+$color-texto: #2c241e;    // Marrón oscuro
+$color-acento: #8b5a2b;   // Tono cuero
+$color-blanco: #ffffff;
+
+// Tipografías SEO-friendly
+$font-titulos: 'Playfair Display', serif;
+$font-cuerpo: 'Montserrat', sans-serif;
+
+// Responsive Breakpoints
+$mobile: 576px;
+$tablet: 768px;

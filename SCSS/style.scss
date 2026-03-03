@@ -1,44 +1,40 @@
 @import "VARIABLES/variables";
-@import "SASS/extend";
-@import "SASS/mixins";
-@import "PARTIALS/footer";
-@import "PARTIALS/header";
-@import "PARTIALS/body";
-@import "PARTIALS/section";
 
-*{
-    margin: 0;
-    padding: 0;
+body {
+    background-color: $color-fondo;
+    color: $color-texto;
+    font-family: $font-cuerpo;
 }
 
-// Corrección para eliminar el subrayado de los enlaces en el contenido
-a {
-    text-decoration: none;
+// Mobile First: Las imágenes se apilan en 1 columna por defecto
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
-.navbar-expand-lg .navbar-collapse {
-    flex-direction: row-reverse;
-}
+// Tarjetas de productos responsivas
+.producto-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    margin-bottom: 2rem;
+    
+    .overflow-hidden {
+        overflow: hidden;
+        border-radius: 4px;
+    }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
-    color: #ffffff;
-}
-span{
-    color:#ffffff;
-}
-.navbar-light .navbar-toggler{
-    color: #ffffff;
-    border: inset;
-}
+    img {
+        width: 100%;
+        height: auto; // Mantiene proporción en móviles
+        transition: transform 0.5s ease;
+        object-fit: cover;
+    }
 
-.navbar-nav{
-    align-items: flex-end;
-}
-
-.fondo{
-    width: 100%;
-}
-
-navbar-nav {
-    font-family: 'Rubik', sans-serif;
+    &:hover {
+        transform: translateY(-5px);
+        img {
+            transform: scale(1.05); // Zoom sutil para detalles de costura
+        }
+    }
 }

@@ -1,85 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Una pagina donde descubriras el arte de la sogueria">
-    <meta name="keywords" content="sogueria, cuero crudo, artesano en cuero, tradicional">
-    <title>Sergio Meolans | Sogueria</title>
-    <link rel="stylesheet" href="https://use.typekit.net/uex0fps.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="description" content="Descubre el arte de la soguería tradicional con Sergio Meolans. Cuchillería, talabartería y artesanías en cuero crudo.">
+    <title>Sergio Meolans | Soguería Tradicional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <script type="text/javascript" src="JS/prefijos.min.js"></script>
-
 </head>
-
 <body>
-    <!--HEADER-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fondo">
+        <nav class="navbar navbar-expand-lg navbar-dark fondo">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="ASSETS/IMG/logo-blanco.png" alt="Sergio Meolans"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span>MENU</span>
+                <a class="navbar-brand" href="index.html">
+                    <img src="ASSETS/IMG/logo-blanco.png" alt="Logotipo Sergio Meolans Soguería" height="60">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="PAGES/curso.html">CURSO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="PAGES/productos.html">PRODUCTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="PAGES/mi-historia.html">MI HISTORIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="PAGES/contacto.html">CONTACTO</a>
-                        </li>
+                <div class="collapse navbar-collapse" id="navMain">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PAGES/curso.html">CURSO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PAGES/productos.html">PRODUCTOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PAGES/mi-historia.html">MI HISTORIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PAGES/contacto.html">CONTACTO</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- MAIN BANNER -->
-    <section class="banner" style="background-image: url(ASSETS/IMG/fondo-banner.webp);">
-        <section class="call-to-action">
-            <p>"Los pueblos que olvidan sus tradiciones pierden la conciencia del destino"</p>
-            <h2>BIENVENIDOS</h2>
-            <a href="PAGES/proceso-de-produccion.html">CONOCER MÁS</a>
+
+    <main>
+        <section class="banner" style="background-image: url(ASSETS/IMG/fondo-banner.webp);">
+            <div class="call-to-action text-center">
+                <p class="fst-italic">"Los pueblos que olvidan sus tradiciones pierden la conciencia del destino"</p>
+                <h2>BIENVENIDOS</h2>
+                <a href="PAGES/proceso-de-produccion.html" class="btn btn-outline-light">CONOCER MÁS</a>
+            </div>
         </section>
+    </main>
+    </body>
+</html>
+
+    <section class="container py-5">
+        <h2 class="text-center mb-4">ENTREVISTAS</h2>
+        <p class="text-center mb-5">Conoce más sobre mi labor artesanal a través de estas charlas para la Agencia
+            Córdoba Cultura.</p>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/rCr_4QbHd2M" title="Entrevista 1"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/2QdGkJXAsZU" title="Entrevista 2"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </section>
-    <!--MULTIMEDIA-->
-    <section class="multimedia">
-        <h2>ENTREVISTAS</h2>
-        <p>Aqui podras ver dos entrevistas que me han realizado, ambas para la Agencia Córdoba Cultura, donde me podras empezar a conocer.</p>
-        <section class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rCr_4QbHd2M?si=Z4VNhCO7Supd5kD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2QdGkJXAsZU"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </section>
-    </section>
-    <!--FOOTER-->
-    <footer>
-        <div class="redes-sociales">
-            <a href="https://www.instagram.com/sergiooscarmeolans/"><img src="ASSETS/IMG/instagram.png"
-                    alt="INSTAGRAM"></a>
-            <a href="https://www.facebook.com/sergiooscar.meolans"><img src="ASSETS/IMG/facebook.png"
-                    alt="FACEBOOK"></a>
+
+    <footer class="py-4 bg-light">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.instagram.com/sergiooscarmeolans/"><img src="ASSETS/IMG/instagram.png"
+                        alt="Instagram" width="30"></a>
+                <a href="https://www.facebook.com/sergiooscar.meolans"><img src="ASSETS/IMG/facebook.png" alt="Facebook"
+                        width="30"></a>
+            </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

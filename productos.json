@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cuchillo Artesanal con Caja",
+        "categoria": "Cuchillería",
+        "descripcion": "Cuchillo de alta gama con detalles de tejido fino, presentado en caja de madera personalizada.",
+        "imagen": "../ASSETS/IMG/Meolans - Cuchillo c-caja Astori1.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Agenda en Cuero Crudo",
+        "categoria": "Accesorios",
+        "descripcion": "Agenda artesanal con recubrimiento de cuero y costuras reforzadas en tiento.",
+        "imagen": "../ASSETS/IMG/Agenda1.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Malla de Reloj Tejida",
+        "categoria": "Accesorios",
+        "descripcion": "Trabajo de precisión extrema con tejidos en tiento para mallas de reloj.",
+        "imagen": "../ASSETS/IMG/OMP9259.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Cabezada y Riendas",
+        "categoria": "Talabartería",
+        "descripcion": "Equipo completo para caballo con trenzados tradicionales y cuero de máxima resistencia.",
+        "imagen": "../ASSETS/IMG/OMP9261.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Cinturón Trenzado",
+        "categoria": "Indumentaria",
+        "descripcion": "Cinturón de cuero con diseño de trenzas complejas y terminaciones artesanales.",
+        "imagen": "../ASSETS/IMG/OMP9266.webp"
+    },
+    {
+        "id": 6,
+        "nombre": "Mate Forrado en Cuero",
+        "categoria": "Accesorios",
+        "descripcion": "Mate artesanal con detalles de soguería fina y costuras expuestas.",
+        "imagen": "../ASSETS/IMG/OMP9279.webp"
+    },
+    {
+        "id": 7,
+        "nombre": "Juego de Aperos Completos",
+        "categoria": "Talabartería",
+        "descripcion": "Desde la cincha hasta el pehual, piezas diseñadas para la vestimenta completa del caballo.",
+        "imagen": "../ASSETS/IMG/DSC_6134.webp"
+    },
+    {
+        "id": 8,
+        "nombre": "Detalle de Costura Fina",
+        "categoria": "Arte",
+        "descripcion": "Muestra del trabajo minucioso en botones y pasadores de cuero crudo.",
+        "imagen": "../ASSETS/IMG/MEO_0009.webp"
+    },
+    {
+        "id": 9,
+        "nombre": "Llaveros y Pequeñas Piezas",
+        "categoria": "Accesorios",
+        "descripcion": "Variedad de artículos pequeños ideales para regalos empresariales.",
+        "imagen": "../ASSETS/IMG/SMeolans (28).webp"
+    }
+]
