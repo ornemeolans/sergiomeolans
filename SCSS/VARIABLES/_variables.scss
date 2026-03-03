@@ -1,13 +1,15 @@
-// Paleta Orgánica
-$color-fondo: #f9f7f2;    // Blanco hueso
-$color-texto: #2c241e;    // Marrón oscuro
-$color-acento: #8b5a2b;   // Tono cuero
+// Paleta Orgánica y Campestre
+$color-fondo: #fdfcf9;    // Blanco hueso / pergamino
+$color-texto: #3e362e;    // Marrón tierra profundo
+$color-acento: #a67b5b;   // Tono cuero sobado
+$color-acento-dark: #6f4e37; // Cuero rústico
+$color-verde-monte: #4a5d4e; // Verde sutil de campo
 $color-blanco: #ffffff;
 
-// Tipografías SEO-friendly
+// Tipografías
 $font-titulos: 'Playfair Display', serif;
 $font-cuerpo: 'Montserrat', sans-serif;
 
-// Responsive Breakpoints
+// Breakpoints
 $mobile: 576px;
 $tablet: 768px;

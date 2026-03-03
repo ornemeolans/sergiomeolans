@@ -4,37 +4,126 @@ body {
     background-color: $color-fondo;
     color: $color-texto;
     font-family: $font-cuerpo;
+    line-height: 1.6;
 }
 
-// Mobile First: Las imágenes se apilan en 1 columna por defecto
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+h1, h2, h3, h4, .navbar-brand {
+    font-family: $font-titulos;
+    font-weight: 700;
 }
 
-// Tarjetas de productos responsivas
+// Navbar Unificada
+.navbar {
+    background-color: rgba(253, 252, 249, 0.95); // Fondo crema traslúcido
+    border-bottom: 1px solid rgba(166, 123, 91, 0.2);
+    
+    .nav-link {
+        color: $color-texto !important;
+        font-weight: 400;
+        letter-spacing: 1px;
+        &:hover {
+            color: $color-acento !important;
+        }
+    }
+}
+
+// Banner de Páginas Internas
+.pages-banner {
+    background-color: $color-acento-dark;
+    padding: 80px 0;
+    text-align: center;
+    color: $color-blanco;
+    margin-bottom: 3rem;
+    
+    h1 { font-size: 3rem; margin-bottom: 1rem; }
+    p { font-style: italic; opacity: 0.9; }
+}
+
+// Tarjetas de productos con estética de "Galería de Arte"
 .producto-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    margin-bottom: 2rem;
+    background: transparent;
+    border: none !important;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     
     .overflow-hidden {
         overflow: hidden;
-        border-radius: 4px;
+        border-radius: 2px; // Menos redondeado = más rústico/elegante
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
     img {
         width: 100%;
-        height: auto; // Mantiene proporción en móviles
-        transition: transform 0.5s ease;
+        height: 350px;
         object-fit: cover;
+        transition: transform 0.6s ease;
+        // Filtro sutil para unificar fotos de distinta luz
+        filter: sepia(0.1) contrast(1.05);
+    }
+
+    .card-body {
+        padding: 1.5rem 0;
+        background: transparent;
+        
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: $color-texto;
+        }
+        
+        p {
+            font-size: 0.9rem;
+            color: lighten($color-texto, 20%);
+        }
     }
 
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
         img {
-            transform: scale(1.05); // Zoom sutil para detalles de costura
+            transform: scale(1.08);
+            filter: sepia(0) contrast(1.1);
         }
     }
+}
+
+// Botones Artesanales
+.btn-custom {
+    background-color: $color-acento;
+    color: white;
+    border-radius: 0;
+    padding: 10px 25px;
+    border: 1px solid $color-acento;
+    transition: all 0.3s;
+    
+    &:hover {
+        background-color: transparent;
+        color: $color-acento;
+    }
+}
+
+/* Animación para que los productos aparezcan suavemente */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.producto-card {
+    transition: transform 0.3s ease;
+    .overflow-hidden {
+        overflow: hidden;
+        border-radius: 4px;
+    }
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
