@@ -1,10 +1,22 @@
+// ============================================
+// SERGIO MEOLANS - SOGUERÍA DE AUTOR
+// Estilos SCSS
+// ============================================
+
+// Importación de variables
 @import "VARIABLES/variables";
 
-// Estilos Globales
+// ============================================
+// RESET Y BASE
+// ============================================
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,302 +24,235 @@ body {
     color: $color-texto;
     font-family: $font-cuerpo;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-h1, h2, h3, h4, .navbar-brand {
+h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-family: $font-titulos;
     font-weight: 700;
 }
 
-// Navbar
-.navbar {
-    background-color: rgba(253, 252, 249, 0.95);
-    border-bottom: 1px solid rgba(166, 123, 91, 0.1);
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
     
+    &:hover {
+        color: $color-acento;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// ============================================
+// NAVEGACIÓN
+// ============================================
+.navbar {
+    background-color: rgba(253, 252, 249, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(166, 123, 91, 0.15);
+    top: 0;
+    z-index: 1030;
+    padding: 0.8rem 0;
+
+    .navbar-brand {
+        color: $color-texto !important;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
     .nav-link {
         color: $color-texto !important;
-        font-weight: 400;
         text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+        border-bottom: 2px solid transparent;
+
         &:hover {
             color: $color-acento !important;
+            border-bottom-color: $color-acento;
+        }
+
+        &.active {
+            color: $color-acento !important;
+            border-bottom-color: $color-acento;
         }
     }
 }
 
-// Banner Hero (Storytelling)
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+// ============================================
+// BANNER HERO
+// ============================================
 .banner-hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
                 url('../ASSETS/IMG/fondo-banner.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: $color-blanco;
-    padding: 0 20px;
+    padding: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+    }
 
     .banner-content {
-        max-width: 800px;
+        position: relative;
+        z-index: 1;
+        max-width: 850px;
         animation: fadeInUp 1s ease-out;
 
         .subtitle {
+            font-size: 1rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.9rem;
             margin-bottom: 1rem;
+            opacity: 0.9;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             margin-bottom: 1.5rem;
             line-height: 1.1;
         }
 
         .narrative {
-            font-family: $font-cuerpo;
+            font-size: 1.15rem;
             font-weight: 300;
-            font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
         }
     }
 }
 
-// Sección Multimedia Mejorada
-.multimedia {
-    .intro-text {
-        padding-right: 2rem;
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: $color-acento-dark;
-        }
-        p {
-            font-size: 1.05rem;
-            color: lighten($color-texto, 10%);
-        }
-    }
-
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; // 16:9 Aspect Ratio
-        height: 0;
-        overflow: hidden;
-        border-radius: 4px;
-        
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
-
-// Botones
+// ============================================
+// BOTÓN PERSONALIZADO
+// ============================================
 .btn-custom {
-    background-color: $color-acento;
-    color: white;
-    border-radius: 0;
-    padding: 15px 40px;
-    border: 1px solid $color-acento;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    transition: all 0.4s;
-    text-decoration: none;
     display: inline-block;
-    
+    padding: 14px 36px;
+    background-color: $color-acento;
+    color: $color-blanco !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border: 2px solid $color-acento;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
     &:hover {
         background-color: transparent;
-        color: white;
-        border-color: white;
-        transform: scale(1.05);
+        color: $color-blanco !important;
+        border-color: $color-blanco;
     }
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-footer {
-    background-color: darken($color-fondo, 5%);
-    padding: 40px 0;
+// ============================================
+// BANNER DE PÁGINAS INTERNAS
+// ============================================
+.pages-banner {
+    background: linear-gradient(135deg, $color-acento-dark 0%, #8b6b4a 100%);
+    padding: 80px 20px;
     text-align: center;
-    img { height: 40px; }
-    p { font-size: 0.8rem; margin-top: 1rem; color: lighten($color-texto, 20%); }
-}
+    color: $color-blanco;
 
-// Contenedor de Galería
-.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 40px 20px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-// Tarjeta de Producto (Estética Galería)
-.producto-card {
-    background: transparent;
-    opacity: 0; // Inicia invisible para la animación
-    animation: fadeInUp 0.8s ease forwards;
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-
-    .img-wrapper {
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 3 / 4;
-        background-color: #f0f0f0;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-        border-radius: 2px;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 1.2s ease, filter 0.8s ease;
-        filter: sepia(0.12) contrast(1.05) brightness(0.95);
-    }
-
-    .card-info {
-        padding: 20px 0;
-        text-align: center;
-
-        h3 {
-            font-family: $font-titulos;
-            font-size: 1.3rem;
-            color: $color-texto;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-        }
-
-        p {
-            font-size: 0.9rem;
-            color: rgba($color-texto, 0.6);
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-
-        .precio {
-            font-family: $font-cuerpo;
-            font-weight: 700;
-            color: $color-acento;
-            font-size: 1.1rem;
-        }
-    }
-
-    // Efecto de interacción
-    &:hover {
-        transform: translateY(-12px);
-        
-        img {
-            transform: scale(1.1);
-            filter: sepia(0) contrast(1.1) brightness(1);
-        }
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-// Navbar Sticky & Glassmorphism sutil
-.navbar {
-    background-color: rgba(253, 252, 249, 0.9) !important; // Fondo crema con transparencia
-    backdrop-filter: blur(10px); // Efecto moderno de desenfoque
-    border-bottom: 1px solid rgba(166, 123, 91, 0.1);
-    top: 0;
-    z-index: 1030;
-    transition: all 0.3s ease;
-
-    .navbar-brand {
-        color: $color-texto;
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 1rem;
         letter-spacing: 2px;
-        font-size: 1.4rem;
-    }
-
-    .nav-link {
-        color: $color-texto !important;
-        font-weight: 400;
-        margin: 0 10px;
-        position: relative;
-        
-        &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: 5px;
-            left: 0;
-            background-color: $color-acento;
-            transition: width 0.3s;
-        }
-
-        &:hover::after {
-            width: 100%;
-        }
-    }
-}
-
-// Footer con flujo normal (Block Flow)
-footer {
-    background-color: darken($color-fondo, 3%);
-    padding: 60px 0 30px;
-    margin-top: auto; // Empuja el footer al final si hay poco contenido
-    width: 100%;
-    position: relative; // Cambiado de absolute a relative
-    border-top: 1px solid rgba(166, 123, 91, 0.1);
-
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .social-links {
-        display: flex;
-        gap: 20px;
-        img {
-            height: 24px;
-            transition: opacity 0.3s;
-            &:hover { opacity: 0.7; }
-        }
     }
 
     p {
-        font-size: 0.8rem;
-        color: rgba($color-texto, 0.6);
-        letter-spacing: 1px;
+        font-size: 1.1rem;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.95;
     }
 }
 
-// Layout para asegurar footer al fondo
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+// ============================================
+// SECCIÓN MULTIMEDIA
+// ============================================
+.multimedia {
+    padding: 60px 0;
+
+    .intro-text {
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: $color-texto;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+    }
 }
 
-@import "VARIABLES/variables";
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
 
-// Estilos para Scroll Reveal
-.reveal {
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// ============================================
+// GRILLA DE PRODUCTOS
+// ============================================
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.producto-card {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -316,67 +261,387 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
 
-// Micro-interacción en Videos de Entrevistas
-.video-container {
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: #000;
-    transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    .img-wrapper {
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        aspect-ratio: 1 / 1;
+        background-color: #f5f5f5;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        border: 1px solid rgba($color-acento, 0);
-        transition: all 0.5s ease;
-        pointer-events: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.1) contrast(1.05);
+            transition: transform 0.8s ease, filter 0.8s ease;
+        }
     }
 
-    &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 20px 40px rgba($color-acento-dark, 0.25);
-        
-        &::after {
-            border: 1px solid rgba($color-acento, 0.5);
-            box-shadow: inset 0 0 20px rgba($color-acento, 0.2);
+    &:hover .img-wrapper img {
+        transform: scale(1.08);
+        filter: sepia(0);
+    }
+
+    .card-info {
+        padding: 20px 0;
+        text-align: justify;
+
+        h3 {
+            font-size: 1.15rem;
+            color: $color-texto;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .categoria {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $color-acento;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .precio {
+            color: $color-acento;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
     }
 }
 
-// Optimización del Hero Banner para que use Reveal
-.banner-content {
-    @extend .reveal;
+// ============================================
+// FILTRO DE CATEGORÍAS
+// ============================================
+.filtro-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.btn-filter {
+    padding: 8px 20px;
+    border: 1px solid $color-acento;
+    background-color: transparent;
+    color: $color-texto;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
+    &:hover {
+        background-color: $color-acento;
+        color: $color-blanco;
+    }
+
+    &.active {
+        background-color: $color-acento;
+        color: $color-blanco;
+        border-color: $color-acento;
+    }
+}
+
+// ============================================
+// PÁGINA MI HISTORIA
+// ============================================
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.historia-img {
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+}
+
+// ============================================
+// PÁGINA CURSO
+// ============================================
+.curso-info {
+    .lead {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .border {
+        border: 1px solid rgba(166, 123, 91, 0.3) !important;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: $color-acento !important;
+            box-shadow: 0 5px 20px rgba(166, 123, 91, 0.15);
+        }
+    }
+
+    .text-muted {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+// Carousel
+#carouselExampleControls {
+    max-width: 900px;
+    margin: 0 auto;
+
+    .carousel-inner {
+        border-radius: 4px;
+    }
+
+    img {
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(62, 54, 46, 0.7);
+    border-radius: 50%;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+// ============================================
+// PÁGINA CONTACTO
+// ============================================
+.contact-info {
+    h2 {
+        font-family: $font-titulos;
+        color: $color-texto;
+    }
+
+    a {
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-acento !important;
+        }
+    }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+footer {
+    background-color: darken($color-fondo, 4%);
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid rgba(166, 123, 91, 0.15);
+    margin-top: auto;
+
+    img {
+        max-width: 80px;
+        margin-bottom: 0.3rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 0.5rem;
+
+    a {
+        display: inline-block;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+    }
+
+    img {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0;
+    }
+}
+
+// ============================================
+// ANIMACIONES
+// ============================================
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+
     &.active {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@import "VARIABLES/variables";
-
-// Banner Hero - Ruta corregida y estandarizada a .webp
-.banner-hero {
-    height: 80vh;
-    // Ruta relativa desde la carpeta CSS (que es donde termina el SCSS compilado)
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('../ASSETS/IMG/fondo-banner.webp') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: $color-blanco;
+// ============================================
+// UTILIDADES
+// ============================================
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-// Contenedor de Productos - Sincronizado con ID y Clase
-#contenedor-productos.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 40px 0;
-    max-width: 1200px;
-    margin: 0 auto;
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
+
+.shadow-sm {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+// Formularios
+.form-control {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 2px;
+    font-family: $font-cuerpo;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+        border-color: $color-acento;
+        box-shadow: 0 0 0 3px rgba(166, 123, 91, 0.15);
+        outline: none;
+    }
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: $color-texto;
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background-color: $color-acento-dark;
+    border-color: $color-acento-dark;
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-acento;
+        border-color: $color-acento;
+    }
+}
+
+.btn-outline-secondary {
+    border-color: #ccc;
+    color: #666;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-color: #bbb;
+        color: #333;
+    }
+}
+
+// ============================================
+// MEDIA QUERIES
+// ============================================
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(253, 252, 249, 0.98);
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 4px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        padding: 10px 0 !important;
+        border-bottom: none;
+    }
+
+    .banner-hero {
+        height: 70vh;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pages-banner {
+        padding: 60px 20px;
+    }
+
+    .intro-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #carouselExampleControls img {
+        height: 300px;
+    }
+
+    .redes-sociales {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .banner-content .narrative {
+        font-size: 1rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+

@@ -1,65 +1,77 @@
 [
     {
         "id": 1,
-        "nombre": "Cuchillo Artesanal con Caja",
-        "categoria": "Cuchillería",
-        "descripcion": "Cuchillo de alta gama con detalles de tejido fino, presentado en caja de madera personalizada.",
-        "imagen": "../ASSETS/IMG/Meolans - Cuchillo c-caja Astori1.webp"
+        "nombre": "Agenda de Cuero de Cuero Crudo con Detalles de Tejido",
+        "categoria": "Accesorios",
+        "descripcion": "Se trata de una agenda o libreta de direcciones encuadernada en cuero vacuno con un acabado rústico y natural. Destaca por sus terminaciones de costura en tiento en los bordes y un cierre de solapa con un botón metálico plateado. El diseño incluye un detalle ovalado bordado en la tapa y separadores alfabéticos de colores, lo que le da un aire clásico y funcional de campo.",
+        "imagen": "../ASSETS/IMG/Agenda1.webp",
+        "precio": "Consultar"
     },
     {
         "id": 2,
-        "nombre": "Agenda en Cuero Crudo",
-        "categoria": "Accesorios",
-        "descripcion": "Agenda artesanal con recubrimiento de cuero y costuras reforzadas en tiento.",
-        "imagen": "../ASSETS/IMG/Agenda1.webp"
+        "nombre": "Cuchillo Verijero de Acero Damasco con Cabo de Tiento",
+        "categoria": "Cuchillería",
+        "descripcion": "Un cuchillo de alta gama que presenta una hoja de acero damasco con un patrón ondulado distintivo. El mango está meticulosamente tejido en tiento de cuero caprino con técnicas de soguería tradicional, complementado por una vaina de cuero vacuno a juego que incluye detalles de costura.",
+        "imagen": "../ASSETS/IMG/DSC_6134.webp",
+        "precio": "Consultar"
     },
     {
         "id": 3,
-        "nombre": "Malla de Reloj Tejida",
+        "nombre": "Cartera de Cuero con Bordado Flor de Lis",
         "categoria": "Accesorios",
-        "descripcion": "Trabajo de precisión extrema con tejidos en tiento para mallas de reloj.",
-        "imagen": "../ASSETS/IMG/OMP9259.webp"
+        "descripcion": "Un bolso de hombro confeccionado en cuero vacuno de tono natural con un diseño rústico y elegante. Presenta un bordado central de una flor de lis realizado con tiento fino y bordes terminados en costura trenzada artesanal. La correa larga y el cierre de solapa con presilla completan esta pieza representativa del trabajo en cuero tradicional.",
+        "imagen": "../ASSETS/IMG/MEO_0009.webp",
+        "precio": "Consultar"
     },
     {
         "id": 4,
-        "nombre": "Cabezada y Riendas",
-        "categoria": "Talabartería",
-        "descripcion": "Equipo completo para caballo con trenzados tradicionales y cuero de máxima resistencia.",
-        "imagen": "../ASSETS/IMG/OMP9261.webp"
+        "nombre": "Set de Cuchillo Verijero y Estuche de Madera Premium",
+        "categoria": "Regalos Empresariales",
+        "descripcion": "Un sofisticado conjunto diseñado específicamente para regalos empresariales de prestigio, que incluye un cuchillo de acero inoxidable con cabo tejido en tiento y virolas de plata. Se presenta en una caja de madera noble personalizada con grabado láser, permitiendo la incorporación de logotipos corporativos. La pieza se completa con una vaina de cuero hecha a mano, lo que la convierte en un obsequio institucional que destaca por su valor artesanal y la identidad de la cultura criolla.",
+        "imagen": "../ASSETS/IMG/Meolans - Cuchillo c-caja Astori1.webp",
+        "precio": "Consultar"
     },
     {
         "id": 5,
-        "nombre": "Cinturón Trenzado",
-        "categoria": "Indumentaria",
-        "descripcion": "Cinturón de cuero con diseño de trenzas complejas y terminaciones artesanales.",
-        "imagen": "../ASSETS/IMG/OMP9266.webp"
+        "nombre": "Llaveros de Cuero y Plata con Motivos Florales",
+        "categoria": "Accesorios",
+        "descripcion": "Un conjunto de tres llaveros artesanales que combinan la robustez del cuero vacuno con la delicadeza de la platería. Cada pieza cuenta con una presilla de cuero con costuras de tiento y un botón tejido, de la cual pende un dije de metal cincelado con distintos diseños botánicos y geométricos..",
+        "imagen": "../ASSETS/IMG/OMP9279.webp",
+        "precio": "Consultar"
     },
     {
         "id": 6,
-        "nombre": "Mate Forrado en Cuero",
-        "categoria": "Accesorios",
-        "descripcion": "Mate artesanal con detalles de soguería fina y costuras expuestas.",
-        "imagen": "../ASSETS/IMG/OMP9279.webp"
+        "nombre": "Cuchillo Verijero Criollo con Cabo Tejido",
+        "categoria": "Cuchillería",
+        "descripcion": "Un cuchillo verijero de diseño tradicional que destaca por su hoja de acero pulido de la marca Argentina. El mango es una pieza de soguería fina, íntegramente tejido en tiento de cuero crudo con patrones geométricos. Se acompaña de una vaina de cuero vacuno curtido, con detalles de costura en tiento y un pasador reforzado, representando la excelencia de la artesanía gauchesca.",
+        "imagen": "../ASSETS/IMG/OMP9261.webp",
+        "precio": "Consultar"
     },
     {
         "id": 7,
-        "nombre": "Juego de Aperos Completos",
-        "categoria": "Talabartería",
-        "descripcion": "Desde la cincha hasta el pehual, piezas diseñadas para la vestimenta completa del caballo.",
-        "imagen": "../ASSETS/IMG/DSC_6134.webp"
+        "nombre": "Juego de Cubiertos de Asado Premium en Caja de Madera",
+        "categoria": "Regalos Empresariales",
+        "descripcion": "Un exclusivo set de cubiertos para asado compuesto por cuchillos y tenedores de alta calidad. Cada pieza presenta un cabo tejido en tiento de cuero crudo con terminaciones en virolas de plata o metal plateado, logrando un equilibrio entre la elegancia y la tradición. El conjunto se presenta en un estuche de madera noble con bisagras reforzadas, ideal para presentaciones de gala o como un obsequio institucional de máximo nivel.",
+        "imagen": "../ASSETS/IMG/SMeolans (28).webp",
+        "precio": "Consultar"
     },
+
     {
         "id": 8,
-        "nombre": "Detalle de Costura Fina",
-        "categoria": "Arte",
-        "descripcion": "Muestra del trabajo minucioso en botones y pasadores de cuero crudo.",
-        "imagen": "../ASSETS/IMG/MEO_0009.webp"
+        "nombre": "Rebenque del Chasqui (Réplica de Museo)",
+        "categoria": "Soguería de Museología",
+        "descripcion": "Esta pieza es una representación de la historia del rebenque del chasqui, un elemento fundamental en el sistema de postas del Virreinato. Originalmente, estos rebenques no solo servían para el arreo, sino que poseían un mango hueco diseñado para transportar mensajes enrollados de forma segura y discreta a través de largas distancias. Esta réplica artesanal presenta un cuerpo de cuero crudo sobado con costuras finas y un compartimento funcional, rindiendo homenaje a los antiguos mensajeros que fueron el primer sistema de comunicación del país.",
+        "imagen": "../ASSETS/IMG/_OMP6130.webp",
+        "precio": "Consultar"
     },
+
     {
         "id": 9,
-        "nombre": "Llaveros y Pequeñas Piezas",
+        "nombre": "Cinto de Cuero con Bordado en Tiento.",
         "categoria": "Accesorios",
-        "descripcion": "Variedad de artículos pequeños ideales para regalos empresariales.",
-        "imagen": "../ASSETS/IMG/SMeolans (28).webp"
+        "descripcion": "Un cinturón confeccionado en cuero crudo vacuno de alta calidad, que destaca por su labor de soguería fina. Presenta una faja central con tejido de tiento en patrones geométricos y una hebilla ovalada revestida en cuero con un detalle central bordado a juego. Es una pieza robusta y elegante, ideal para completar la vestimenta tradicional o como un accesorio distintivo de uso diario.",
+        "imagen": "../ASSETS/IMG/Cinto con costura de borde.webp",
+        "precio": "Consultar"
     }
 ]
+

@@ -1,9 +1,14 @@
+// ============================================
+// SERGIO MEOLANS - VARIABLES DE DISEÑO
 // Paleta Orgánica y Campestre
-$color-fondo: #fdfcf9;    // Blanco hueso / pergamino
-$color-texto: #3e362e;    // Marrón tierra profundo
-$color-acento: #a67b5b;   // Tono cuero sobado
-$color-acento-dark: #6f4e37; // Cuero rústico
-$color-verde-monte: #4a5d4e; // Verde sutil de campo
+// ============================================
+
+// Colores
+$color-fondo: #fdfcf9;           // Blanco hueso / pergamino
+$color-texto: #3e362e;           // Marrón tierra profundo
+$color-acento: #a67b5b;          // Tono cuero sobado
+$color-acento-dark: #6f4e37;     // Cuero rústico
+$color-verde-monte: #4a5d4e;     // Verde sutil de campo
 $color-blanco: #ffffff;
 
 // Tipografías
@@ -13,3 +18,28 @@ $font-cuerpo: 'Montserrat', sans-serif;
 // Breakpoints
 $mobile: 576px;
 $tablet: 768px;
+$desktop: 992px;
+$large: 1200px;
+
+// Espaciados
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Bordes
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-lg: 8px;
+
+// Sombras
+$shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+
