@@ -1,10 +1,18 @@
 @import "VARIABLES/variables";
 
+// Estilos Globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: $color-fondo;
     color: $color-texto;
     font-family: $font-cuerpo;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, .navbar-brand {
@@ -12,14 +20,16 @@ h1, h2, h3, h4, .navbar-brand {
     font-weight: 700;
 }
 
-// Navbar Unificada
+// Navbar
 .navbar {
-    background-color: rgba(253, 252, 249, 0.95); // Fondo crema traslúcido
-    border-bottom: 1px solid rgba(166, 123, 91, 0.2);
+    background-color: rgba(253, 252, 249, 0.95);
+    border-bottom: 1px solid rgba(166, 123, 91, 0.1);
     
     .nav-link {
         color: $color-texto !important;
         font-weight: 400;
+        text-transform: uppercase;
+        font-size: 0.85rem;
         letter-spacing: 1px;
         &:hover {
             color: $color-acento !important;
@@ -27,103 +37,346 @@ h1, h2, h3, h4, .navbar-brand {
     }
 }
 
-// Banner de Páginas Internas
-.pages-banner {
-    background-color: $color-acento-dark;
-    padding: 80px 0;
+// Banner Hero (Storytelling)
+.banner-hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../ASSETS/IMG/fondo-banner.webp') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: $color-blanco;
-    margin-bottom: 3rem;
-    
-    h1 { font-size: 3rem; margin-bottom: 1rem; }
-    p { font-style: italic; opacity: 0.9; }
-}
+    padding: 0 20px;
 
-// Tarjetas de productos con estética de "Galería de Arte"
-.producto-card {
-    background: transparent;
-    border: none !important;
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    
-    .overflow-hidden {
-        overflow: hidden;
-        border-radius: 2px; // Menos redondeado = más rústico/elegante
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+    .banner-content {
+        max-width: 800px;
+        animation: fadeInUp 1s ease-out;
 
-    img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        transition: transform 0.6s ease;
-        // Filtro sutil para unificar fotos de distinta luz
-        filter: sepia(0.1) contrast(1.05);
-    }
-
-    .card-body {
-        padding: 1.5rem 0;
-        background: transparent;
-        
-        h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: $color-texto;
-        }
-        
-        p {
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
             font-size: 0.9rem;
-            color: lighten($color-texto, 20%);
+            margin-bottom: 1rem;
         }
-    }
 
-    &:hover {
-        transform: translateY(-8px);
-        img {
-            transform: scale(1.08);
-            filter: sepia(0) contrast(1.1);
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .narrative {
+            font-family: $font-cuerpo;
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
         }
     }
 }
 
-// Botones Artesanales
+// Sección Multimedia Mejorada
+.multimedia {
+    .intro-text {
+        padding-right: 2rem;
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: $color-acento-dark;
+        }
+        p {
+            font-size: 1.05rem;
+            color: lighten($color-texto, 10%);
+        }
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; // 16:9 Aspect Ratio
+        height: 0;
+        overflow: hidden;
+        border-radius: 4px;
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Botones
 .btn-custom {
     background-color: $color-acento;
     color: white;
     border-radius: 0;
-    padding: 10px 25px;
+    padding: 15px 40px;
     border: 1px solid $color-acento;
-    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+    text-decoration: none;
+    display: inline-block;
     
     &:hover {
         background-color: transparent;
-        color: $color-acento;
-    }
-}
-
-/* Animación para que los productos aparezcan suavemente */
-@keyframes fadeInUp {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
-}
-
-.producto-card {
-    transition: transform 0.3s ease;
-    .overflow-hidden {
-        overflow: hidden;
-        border-radius: 4px;
-    }
-    &:hover {
-        transform: translateY(-5px);
+        color: white;
+        border-color: white;
+        transform: scale(1.05);
     }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    background-color: darken($color-fondo, 5%);
+    padding: 40px 0;
+    text-align: center;
+    img { height: 40px; }
+    p { font-size: 0.8rem; margin-top: 1rem; color: lighten($color-texto, 20%); }
+}
+
+// Contenedor de Galería
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+// Tarjeta de Producto (Estética Galería)
+.producto-card {
+    background: transparent;
+    opacity: 0; // Inicia invisible para la animación
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    .img-wrapper {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        background-color: #f0f0f0;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        border-radius: 2px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s ease, filter 0.8s ease;
+        filter: sepia(0.12) contrast(1.05) brightness(0.95);
+    }
+
+    .card-info {
+        padding: 20px 0;
+        text-align: center;
+
+        h3 {
+            font-family: $font-titulos;
+            font-size: 1.3rem;
+            color: $color-texto;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: rgba($color-texto, 0.6);
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            font-family: $font-cuerpo;
+            font-weight: 700;
+            color: $color-acento;
+            font-size: 1.1rem;
+        }
+    }
+
+    // Efecto de interacción
+    &:hover {
+        transform: translateY(-12px);
+        
+        img {
+            transform: scale(1.1);
+            filter: sepia(0) contrast(1.1) brightness(1);
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Navbar Sticky & Glassmorphism sutil
+.navbar {
+    background-color: rgba(253, 252, 249, 0.9) !important; // Fondo crema con transparencia
+    backdrop-filter: blur(10px); // Efecto moderno de desenfoque
+    border-bottom: 1px solid rgba(166, 123, 91, 0.1);
+    top: 0;
+    z-index: 1030;
+    transition: all 0.3s ease;
+
+    .navbar-brand {
+        color: $color-texto;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        color: $color-texto !important;
+        font-weight: 400;
+        margin: 0 10px;
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 5px;
+            left: 0;
+            background-color: $color-acento;
+            transition: width 0.3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+// Footer con flujo normal (Block Flow)
+footer {
+    background-color: darken($color-fondo, 3%);
+    padding: 60px 0 30px;
+    margin-top: auto; // Empuja el footer al final si hay poco contenido
+    width: 100%;
+    position: relative; // Cambiado de absolute a relative
+    border-top: 1px solid rgba(166, 123, 91, 0.1);
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 20px;
+        img {
+            height: 24px;
+            transition: opacity 0.3s;
+            &:hover { opacity: 0.7; }
+        }
+    }
+
+    p {
+        font-size: 0.8rem;
+        color: rgba($color-texto, 0.6);
+        letter-spacing: 1px;
+    }
+}
+
+// Layout para asegurar footer al fondo
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@import "VARIABLES/variables";
+
+// Estilos para Scroll Reveal
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Micro-interacción en Videos de Entrevistas
+.video-container {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #000;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border: 1px solid rgba($color-acento, 0);
+        transition: all 0.5s ease;
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 40px rgba($color-acento-dark, 0.25);
+        
+        &::after {
+            border: 1px solid rgba($color-acento, 0.5);
+            box-shadow: inset 0 0 20px rgba($color-acento, 0.2);
+        }
+    }
+}
+
+// Optimización del Hero Banner para que use Reveal
+.banner-content {
+    @extend .reveal;
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@import "VARIABLES/variables";
+
+// Banner Hero - Ruta corregida y estandarizada a .webp
+.banner-hero {
+    height: 80vh;
+    // Ruta relativa desde la carpeta CSS (que es donde termina el SCSS compilado)
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../ASSETS/IMG/fondo-banner.webp') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $color-blanco;
+}
+
+// Contenedor de Productos - Sincronizado con ID y Clase
+#contenedor-productos.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }

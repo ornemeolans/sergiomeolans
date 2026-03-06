@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,105 +12,103 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <script type="text/javascript" src="JS/prefijos.min.js"></script>
 </head>
+
 <body>
-<!--HEADER-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fondo">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../ASSETS/IMG/logo-blanco.png" alt="Sergio Meolans"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span>MENU</span>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">SERGIO MEOLANS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="curso.html">CURSO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="productos.html">PRODUCTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="mi-historia.html">MI HISTORIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
-                        </li>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="curso.html">CURSO</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="productos.html">PRODUCTOS</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="mi-historia.html">MI HISTORIA</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contacto.html">CONTACTO</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!--DESCRIPTION-->
+
     <section class="pages-banner">
-        <h1>CURSO</h1>
-        <p>Hace 5 años comence a dictar cursos para que este noble arte se perpetue en el tiempo, y para que asi como yo lo aprendí de mi maestro, otros lo puedan aprender de mi. 
-        El curso consta de dos clases mensuales, donde aprenderas desde como preparar tu material hasta realizar el tejido de un cabo de cuchillo. 
-        Son clases con grupos reducidos de no mas de 5 personas. 
-        Hace tu consulta en la seccion de contacto. Aquí podras ver algunas fotos de como son las clases para que vayas conociendo un poco más. </p>
+        <div class="container">
+            <h1>CURSO DE SOGUERÍA</h1>
+            <p>Transmitiendo el noble arte del cuero de generación en generación.</p>
+        </div>
     </section>
-    <!--GALLERY-->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../ASSETS/IMG/curso1.webp" class="d-block w-100" alt="...">
+
+    <section class="container mb-5 fade-in-up">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <p class="lead mb-5">Hace 5 años comencé a dictar cursos para que este arte se perpetúe. Aprenderás
+                    desde la preparación del material hasta el tejido final de un cabo de cuchillo, de la misma forma
+                    que yo lo aprendí de mi maestro.</p>
+
+                <div class="row g-4 mb-5 text-uppercase" style="letter-spacing: 1px; font-size: 0.8rem;">
+                    <div class="col-md-4">
+                        <div class="p-4 border">
+                            <span class="text-muted d-block mb-2">Frecuencia</span>
+                            <strong>2 clases mensuales</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 border">
+                            <span class="text-muted d-block mb-2">Capacidad</span>
+                            <strong>Máximo 5 personas</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 border">
+                            <span class="text-muted d-block mb-2">Modalidad</span>
+                            <strong>Taller Presencial</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mb-4">Consulta disponibilidad y próximos inicios a través de nuestro formulario.</p>
+                <a href="contacto.html" class="btn-custom mb-5">Consultar fechas</a>
             </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso2.webp" class="d-block w-100" alt="...">
+        </div>
+    </section>
+
+    <div id="carouselExampleControls" class="carousel slide container pb-5" data-bs-ride="carousel">
+        <div class="carousel-inner shadow-lg">
+            <div class="carousel-item active"><img src="../ASSETS/IMG/curso1.webp" class="d-block w-100" alt="Clase 1">
             </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso3.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso4.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso5.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso6.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso7.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso8.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso9.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso10.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso11.webp" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../ASSETS/IMG/curso12.webp" class="d-block w-100" alt="...">
-            </div>
+            <div class="carousel-item"><img src="../ASSETS/IMG/curso2.webp" class="d-block w-100" alt="Clase 2"></div>
+            <div class="carousel-item"><img src="../ASSETS/IMG/curso3.webp" class="d-block w-100" alt="Clase 3"></div>
+            <div class="carousel-item"><img src="../ASSETS/IMG/curso4.webp" class="d-block w-100" alt="Clase 4"></div>
+            <div class="carousel-item"><img src="../ASSETS/IMG/curso5.webp" class="d-block w-100" alt="Clase 5"></div>
+            <div class="carousel-item"><img src="../ASSETS/IMG/curso6.webp" class="d-block w-100" alt="Clase 6"></div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
+
     <footer>
         <div class="redes-sociales">
-            <a href="https://www.instagram.com/sergiooscarmeolans/"><img src="../ASSETS/IMG/instagram.png" alt="INSTAGRAM"></a>
-            <a href="https://www.facebook.com/sergiooscar.meolans"><img src="../ASSETS/IMG/facebook.png" alt="FACEBOOK"></a>
+            <a href="https://www.instagram.com/sergiooscarmeolans/"><img src="../ASSETS/IMG/instagram.png"
+                    alt="INSTAGRAM"></a>
+            <a href="https://www.facebook.com/sergiooscar.meolans"><img src="../ASSETS/IMG/facebook.png"
+                    alt="FACEBOOK"></a>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>   
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
