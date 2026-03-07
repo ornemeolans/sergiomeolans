@@ -41,18 +41,22 @@
             <div class="col-lg-6">
                 <div class="p-4 bg-white shadow-sm rounded">
                     <h2 class="h4 mb-4">Envíame un mensaje</h2>
-                    <form id="contacto-form">
+                    <form id="contacto-form" action="https://formspree.io/f/mbdzjndy" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="contacto@ejemplo.com" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="contacto@ejemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="whatsapp" class="form-label">WhatsApp</label>
+                            <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="351 1234567">
                         </div>
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
                         </div>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary">ENVIAR</button>
@@ -98,6 +102,32 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Estilos para SweetAlert personalizados */
+        .swal2-confirm.btn-swal-custom {
+            background-color: #a67b5b !important;
+            color: #fff !important;
+            border: none !important;
+            padding: 10px 30px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 500 !important;
+            border-radius: 4px !important;
+            transition: background-color 0.3s ease !important;
+        }
+        .swal2-confirm.btn-swal-custom:hover {
+            background-color: #6f4e37 !important;
+        }
+        .swal2-title {
+            font-family: 'Playfair Display', serif !important;
+            color: #3e362e !important;
+        }
+        .swal2-text {
+            font-family: 'Montserrat', sans-serif !important;
+            color: #3e362e !important;
+        }
+    </style>
+    <script src="../JS/main.js"></script>
 </body>
 
 </html>

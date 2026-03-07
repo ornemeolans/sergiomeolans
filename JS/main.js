@@ -129,27 +129,68 @@ document.addEventListener("DOMContentLoaded", () => {
     // Activar animaciones de reveal
     observarElementos();
     
-    // Validación de formulario de contacto
+    // ============================================
+    // FORMULARIO DE CONTACTO CON FORMSPREE
+    // ============================================
     const formulario = document.getElementById('contacto-form');
     if (formulario) {
-        formulario.addEventListener('submit', (e) => {
+        formulario.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            // Crear mensaje de WhatsApp
-            const texto = `Hola, soy ${nombre}. Mi email es ${email}. Mi mensaje: ${mensaje}`;
-            const urlWhatsApp = `https://wa.me/5493516560696?text=${encodeURIComponent(texto)}`;
-            
-            // Abrir WhatsApp
-            window.open(urlWhatsApp, '_blank');
-            
-            // Limpiar formulario
-            formulario.reset();
-            
-            alert('Gracias por tu mensaje. Serás redirigido a WhatsApp para enviar tu consulta.');
+            const submitBtn = formulario.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Enviando...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(formulario);
+                const response = await fetch(formulario.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Mostrar SweetAlert de éxito con colores de la página
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Mensaje enviado!',
+                        text: 'Tu mensaje ha sido enviado correctamente. Te responderé a la brevedad.',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#a67b5b',
+                        background: '#fdfcf9',
+                        color: '#3e362e',
+                        customClass: {
+                            confirmButton: 'btn-swal-custom'
+                        },
+                        allowOutsideClick: false
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            formulario.reset();
+                            // Redireccionar a la página de inicio
+                            window.location.href = '../index.html';
+                        }
+                    });
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.',
+                    confirmButtonText: 'Aceptar',
+                    confirmButtonColor: '#a67b5b',
+                    background: '#fdfcf9',
+                    color: '#3e362e'
+                });
+            } finally {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 
