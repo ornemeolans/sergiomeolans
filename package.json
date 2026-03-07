@@ -2,14 +2,15 @@
   "name": "ornella-meolans-3ra-preentrega",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "build-css": "sass SCSS/style.scss CSS/style.css",
-  "watch-css": "sass SCSS/style.scss CSS/style.css --watch",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+  "scripts": {
+    "build-css": "sass SCSS/style.scss CSS/style.css",
+    "watch-css": "sass SCSS/style.scss CSS/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sass": "^1.71.1",
     "nodemon": "^2.0.16"
   },
   "repository": {
