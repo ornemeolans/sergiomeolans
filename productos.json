@@ -4,72 +4,63 @@
         "nombre": "Agenda de Cuero de Cuero Crudo con Detalles de Tejido",
         "categoria": "Accesorios",
         "descripcion": "Se trata de una agenda o libreta de direcciones encuadernada en cuero vacuno con un acabado rustico y natural. Destaca por sus terminaciones de costura en tiento en los bordes y un cierre de solapa con un boton metalico plateado.",
-        "imagen": "../ASSETS/IMG/Agenda1.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/Agenda1.webp"
     },
     {
         "id": 2,
         "nombre": "Cuchillo Verijero de Acero Damasco con Cabo de Tiento",
         "categoria": "Cuchilleria",
         "descripcion": "Un cuchillo de alta gama que presenta una hoja de acero damasco con un patron ondulado distintivo. El mango esta meticulosamente tejido en tiento de cuero caprino con tecnicas de sogueria tradicional.",
-        "imagen": "../ASSETS/IMG/DSC_6134.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/DSC_6134.webp"
     },
     {
         "id": 3,
         "nombre": "Cartera de Cuero con Bordado Flor de Lis",
         "categoria": "Accesorios",
         "descripcion": "Un bolso de hombro confeccionado en cuero vacuno de tono natural con un diseno rustico y elegante. Presenta un bordado central de una flor de lis realizado con tiento fino.",
-        "imagen": "../ASSETS/IMG/MEO_0009.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/MEO_0009.webp"
     },
     {
         "id": 4,
         "nombre": "Set de Cuchillo Verijero y Estuche de Madera Premium",
         "categoria": "Regalos Empresariales",
         "descripcion": "Un sofisticado conjunto diseñado especificamente para regalos empresariales de prestigio, que incluye un cuchillo de acero inoxidable con cabo tejido en tiento y virolas de plata.",
-        "imagen": "../ASSETS/IMG/Meolans - Cuchillo c-caja Astori1.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/Meolans - Cuchillo c-caja Astori1.webp"
     },
     {
         "id": 5,
         "nombre": "Llaveros de Cuero y Plata con Motivos Florales",
         "categoria": "Accesorios",
         "descripcion": "Un conjunto de tres llaveros artesanales que combinan la robustez del cuero vacuno con la delicadeza de la plateria.",
-        "imagen": "../ASSETS/IMG/OMP9279.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/OMP9279.webp"
     },
     {
         "id": 6,
         "nombre": "Cuchillo Verijero Criollo con Cabo Tejido",
         "categoria": "Cuchilleria",
         "descripcion": "Un cuchillo verijero de diseno tradicional que destaca por su hoja de acero pulido. El mango es una pieza de sogueria fina, integramente tejido en tiento de cuero crudo.",
-        "imagen": "../ASSETS/IMG/OMP9261.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/OMP9261.webp"
     },
     {
         "id": 7,
         "nombre": "Juego de Cubiertos de Asado Premium en Caja de Madera",
         "categoria": "Regalos Empresariales",
         "descripcion": "Un exclusivo set de cubiertos para asado compuesto por cuchillos y tenedores de alta calidad. Cada pieza presenta un cabo tejido en tiento de cuero crudo.",
-        "imagen": "../ASSETS/IMG/SMeolans (28).webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/SMeolans (28).webp"
     },
     {
         "id": 8,
         "nombre": "Rebenque del Chasqui (Replica de Museo)",
         "categoria": "Sogueria de Museologia",
         "descripcion": "Esta pieza es una representacion de la historia del rebenque del chasqui, un elemento fundamental en el sistema de postas del Virreinato.",
-        "imagen": "../ASSETS/IMG/OMP6130.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/OMP6130.webp"
     },
     {
         "id": 9,
         "nombre": "Cinto de Cuero con Bordado en Tiento",
         "categoria": "Accesorios",
         "descripcion": "Un cinturon confeccionado en cuero crudo vacuno de alta calidad, que destaca por su labor de sogueria fina.",
-        "imagen": "../ASSETS/IMG/OMP9266.webp",
-        "precio": "Consultar"
+        "imagen": "../ASSETS/IMG/Cinto con costura de borde.webp"
     }
 ]
 

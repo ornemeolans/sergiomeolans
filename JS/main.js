@@ -63,7 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="categoria">${producto.categoria}</span>
                         <h3>${producto.nombre}</h3>
                         <p class="small text-muted">${producto.descripcion}</p>
-                        <span class="precio">${producto.precio}</span>
+                        <button class="btn-cotizacion" onclick="solicitarCotizacion('${producto.nombre.replace(/'/g, "\\'")}')">
+                            Solicitar Cotización
+                        </button>
                     </div>
                 </div>
             `).join("");
@@ -195,4 +197,47 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// ============================================
+// FUNCIÓN GLOBAL: SOLICITAR COTIZACIÓN
+// ============================================
+function solicitarCotizacion(nombreProducto) {
+    const mensajeWhatsApp = `Hola Sergio, me interesa solicitar una cotización para el producto: ${nombreProducto}`;
+    const enlaceWhatsApp = `https://wa.me/5493516560696?text=${encodeURIComponent(mensajeWhatsApp)}`;
+    
+    const asuntoMail = `Cotización: ${nombreProducto}`;
+    const cuerpoMail = `Hola Sergio,%0D%0A%0D%0AMe interesa solicitar una cotización para el producto: ${nombreProducto}%0D%0A%0D%0ASaludos.`;
+    const enlaceMail = `mailto:sergiomeolans@gmail.com?subject=${encodeURIComponent(asuntoMail)}&body=${cuerpoMail}`;
+
+    Swal.fire({
+        title: 'Solicitar Cotización',
+        text: `Elige cómo quieres solicitar la cotización del producto: ${nombreProducto}`,
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: '<img src="../ASSETS/IMG/whatsapp.png" alt="WhatsApp" style="width:20px;vertical-align:middle;margin-right:8px;"> WhatsApp',
+        denyButtonText: '<img src="../ASSETS/IMG/gmail.png" alt="Email" style="width:20px;vertical-align:middle;margin-right:8px;"> Email',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#25D366',
+        denyButtonColor: '#a67b5b',
+        cancelButtonColor: '#6c757d',
+        background: '#fdfcf9',
+        color: '#3e362e',
+        customClass: {
+            title: 'swal-title-custom',
+            htmlContainer: 'swal-text-custom',
+            confirmButton: 'btn-swal-whatsapp',
+            denyButton: 'btn-swal-email',
+            cancelButton: 'btn-swal-cancel'
+        },
+        allowOutsideClick: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // WhatsApp
+            window.open(enlaceWhatsApp, '_blank');
+        } else if (result.isDenied) {
+            // Email
+            window.location.href = enlaceMail;
+        }
+    });
+}
 
