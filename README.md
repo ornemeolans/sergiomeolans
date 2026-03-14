@@ -20,6 +20,25 @@ El sitio fue desarrollado utilizando un flujo de trabajo moderno para asegurar e
 - **JSON**: Gestión de datos de productos para facilitar la actualización del inventario sin modificar el código base.
 - **Netlify**: Configuración de despliegue continuo para la plataforma.
 
+## ⚙️ Instalación y Ejecución Local
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/ornemeolans/sergiomeolans.git
+2. **Navegar al directorio**
+   ```bash
+    cd sergiomeolans
+3. **Instalar dependencias:**
+    Requiere Node.js instalado. Ejecuta el siguiente comando para instalar las herramientas de compilación de SASS:
+    ```bash
+    npm install
+4. **Compilación de estilos:**
+    Para procesar los archivos .scss a .css, utiliza el script configurado:
+   ```bash
+   npm run build:css
+5. **Ejecución:**
+   Abre el archivo index.html mediante un servidor local (como Live Server) para que los datos de productos.json se carguen correctamente.
+
 ## 📂 Estructura del Repositorio
 ```text
 /
